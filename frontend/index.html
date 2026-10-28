@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniLang Lexical Analyzer | Compiler Construction</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <h1>MiniLang Lexical Analyzer</h1>
+      <p class="subtitle">Compiler Construction Mini Project</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    
+    <!-- Source Code Section -->
+    <section class="card">
+      <h2 class="card-title">Source Code</h2>
+      <div class="editor-container">
+        <textarea id="code-input" spellcheck="false" placeholder="Write MiniLang code here...">START
+    INT age = 20;
+    FLOAT marks = 89.5;
+    STRING name = "Tanu";
+
+    IF age >= 18 THEN
+        PRINT("Eligible");
+    ELSE
+        PRINT("Not Eligible");
+    ENDIF
+END</textarea>
+      </div>
+
+      <div class="button-group">
+        <button id="btn-analyze" class="btn btn-primary">Analyze Code</button>
+        <button id="btn-clear" class="btn btn-secondary">Clear</button>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results-section" class="card">
+      
+      <!-- Summary Bar -->
+      <div id="summary-bar" class="summary-bar">
+        <strong>Analysis Result:</strong> <span id="summary-text">0 Tokens | 0 Identifiers | 0 Errors</span>
+      </div>
+
+      <!-- Token Table -->
+      <div class="result-block">
+        <h3 class="section-title">Token Table</h3>
+        <div class="table-wrapper">
+          <table class="data-table" id="table-tokens">
+            <thead>
+              <tr>
+                <th>Lexeme</th>
+                <th>Token Type</th>
+                <th>Line</th>
+                <th>Column</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="4" class="placeholder-text">Click "Analyze Code" to display tokens.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Symbol Table -->
+      <div class="result-block">
+        <h3 class="section-title">Symbol Table</h3>
+        <div class="table-wrapper">
+          <table class="data-table" id="table-symbol">
+            <thead>
+              <tr>
+                <th>Identifier</th>
+                <th>Type</th>
+                <th>Line</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="3" class="placeholder-text">No identifiers detected.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Lexical Errors -->
+      <div class="result-block">
+        <h3 class="section-title">Lexical Errors</h3>
+        <div id="errors-container" class="table-wrapper">
+          <div id="no-errors-msg" class="success-message">✓ No lexical errors found.</div>
+          <table class="data-table hidden" id="table-errors">
+            <thead>
+              <tr>
+                <th>Lexeme</th>
+                <th>Error</th>
+                <th>Line</th>
+                <th>Column</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>MiniLang Lexical Analyzer &bull; Compiler Construction Lab Project</p>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

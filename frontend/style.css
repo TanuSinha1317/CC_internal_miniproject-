@@ -1,0 +1,230 @@
+/* ==========================================================================
+   MiniLang Lexical Analyzer - Simple College Mini-Project Style
+   ========================================================================== */
+
+:root {
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --border-color: #334155;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --primary: #38bdf8;
+  --primary-hover: #0284c7;
+  --secondary: #475569;
+  --secondary-hover: #334155;
+  --danger: #f87171;
+  --success: #4ade80;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-code: 'Fira Code', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  padding-bottom: 2rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+.header {
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1.5rem 0;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.header .subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* Card Section */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+/* Code Input Area */
+.editor-container {
+  margin-bottom: 1rem;
+}
+
+#code-input {
+  width: 100%;
+  height: 220px;
+  background-color: #090d16;
+  color: #e2e8f0;
+  font-family: var(--font-code);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  outline: none;
+  resize: vertical;
+  tab-size: 4;
+}
+
+#code-input:focus {
+  border-color: var(--primary);
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #0f172a;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: var(--text-main);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-hover);
+}
+
+/* Summary Bar */
+.summary-bar {
+  background-color: #090d16;
+  border: 1px solid var(--border-color);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.summary-bar strong {
+  color: var(--text-main);
+}
+
+#summary-text {
+  color: var(--primary);
+  font-family: var(--font-code);
+}
+
+/* Result Blocks & Tables */
+.result-block {
+  margin-bottom: 1.5rem;
+}
+
+.result-block:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.35rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #090d16;
+  color: var(--text-muted);
+  font-weight: 600;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid var(--border-color);
+}
+
+.data-table td {
+  padding: 0.55rem 0.85rem;
+  border: 1px solid var(--border-color);
+  font-family: var(--font-code);
+  color: #e2e8f0;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.015);
+}
+
+.placeholder-text {
+  text-align: center;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  padding: 1.5rem 1rem !important;
+}
+
+.success-message {
+  color: var(--success);
+  font-size: 0.9rem;
+  padding: 0.75rem 0;
+  font-weight: 500;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 1.5rem;
+}

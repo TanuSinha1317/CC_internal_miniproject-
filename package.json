@@ -1,0 +1,24 @@
+{
+  "name": "mini-lang-lexer",
+  "version": "1.0.0",
+  "description": "Lexical Analyzer for Custom Mini-Language (MiniLang) - Compiler Construction Mini Project",
+  "main": "backend/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node --watch backend/server.js"
+  },
+  "keywords": [
+    "compiler-construction",
+    "lexical-analyzer",
+    "lexer",
+    "minilang",
+    "tokenizer",
+    "symbol-table"
+  ],
+  "author": "Compiler Construction Student",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

@@ -1,0 +1,21 @@
+# Frontend
+node_modules/
+.next/
+dist/
+.env
+.env.local
+.env.production
+
+# Backend
+target/
+*.class
+application-local.properties
+application-local.yml
+
+# IDE and OS
+.idea/
+.DS_Store
+
+# Secrets
+*.pem
+*.key
